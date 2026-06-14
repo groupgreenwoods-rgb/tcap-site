@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .container {
   padding: 32px;
   color: white;
@@ -326,4 +327,334 @@
     line-height: 1.6;
     padding: 14px;
   }
+=======
+.container {
+  padding: 32px;
+  color: white;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+/* ================= HEADER ================= */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.title {
+  display: flex;
+  gap: 10px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.subtitle {
+  font-size: 13px;
+  color: #a1a1aa;
+  margin-top: 4px;
+}
+
+/* ================= FILTROS ================= */
+
+.filters {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.filters button {
+  padding: 7px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(139,92,246,0.25);
+  background: transparent;
+  color: #aaa;
+  cursor: pointer;
+  transition: 0.2s;
+  font-size: 12px;
+}
+
+.filters button:hover {
+  border-color: rgba(139,92,246,0.5);
+  color: white;
+}
+
+.active {
+  background: rgba(139,92,246,0.2);
+  color: white;
+  border-color: rgba(139,92,246,0.6);
+}
+
+/* ================= SEARCH ================= */
+
+.searchBox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 14px 16px;
+  border-radius: 12px;
+
+  background: rgba(10,7,20,0.6);
+  border: 1px solid rgba(139,92,246,0.2);
+
+  backdrop-filter: blur(10px);
+}
+
+.searchBox input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: white;
+  outline: none;
+  font-size: 14px;
+}
+
+/* ================= GRID (2 POR LINHA) ================= */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 🔥 FIXO 2 CARDS */
+  gap: 18px;
+}
+
+/* ================= CARD ================= */
+
+.card {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+
+  padding: 20px;
+  border-radius: 14px;
+
+  background: rgba(10,7,20,0.65);
+  border: 1px solid rgba(139,92,246,0.15);
+
+  transition: 0.25s ease;
+  cursor: pointer;
+
+  min-height: 140px;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(139,92,246,0.5);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.iconBox {
+  font-size: 20px;
+  color: #8b5cf6;
+  margin-top: 3px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+}
+
+.content strong {
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.content span {
+  font-size: 12px;
+  color: #a1a1aa;
+}
+
+.badge {
+  font-size: 11px;
+  padding: 4px 10px;
+  border-radius: 999px;
+
+  background: rgba(139,92,246,0.15);
+  color: #c4b5fd;
+
+  align-self: flex-start;
+}
+
+/* ================= MODAL ================= */
+
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.75);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 999;
+}
+
+.modal {
+  width: 92%;
+  max-width: 750px;
+
+  height: 90vh;
+  max-height: 90vh;
+
+  overflow-y: auto;
+
+  background: rgba(10,7,20,0.97);
+  border: 1px solid rgba(139,92,246,0.35);
+
+  border-radius: 16px;
+  padding: 26px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+
+  box-shadow: 0 25px 70px rgba(0,0,0,0.6);
+
+  position: relative;
+}
+
+.modal h3 {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.modal p {
+  font-size: 15px;
+  color: #c4c4cc;
+  line-height: 1.5;
+}
+
+.contentBox {
+  margin-top: 12px;
+
+  padding: 18px;
+  border-radius: 12px;
+
+  background: rgba(139,92,246,0.08);
+  border: 1px solid rgba(139,92,246,0.15);
+
+  font-size: 15px;
+  color: #e5e5e5;
+  line-height: 1.7;
+
+  white-space: pre-wrap;
+}
+
+.modal button {
+  margin-top: 14px;
+  padding: 12px 16px;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  border: none;
+  border-radius: 10px;
+
+  background: #8b5cf6;
+  color: white;
+
+  cursor: pointer;
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+
+  .container {
+    padding: 18px;
+    gap: 16px;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+
+  .subtitle {
+    font-size: 12px;
+  }
+
+  .filters {
+    width: 100%;
+    overflow-x: auto;
+    padding-bottom: 6px;
+  }
+
+  .filters button {
+    white-space: nowrap;
+    flex-shrink: 0;
+    font-size: 11px;
+  }
+
+  .searchBox {
+    padding: 12px;
+    font-size: 13px;
+  }
+
+  .searchBox input {
+    font-size: 13px;
+  }
+
+  /* 🔥 MOBILE VOLTA PRA 1 POR LINHA */
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .card {
+    padding: 14px;
+    min-height: auto;
+    gap: 12px;
+  }
+
+  .content strong {
+    font-size: 14px;
+  }
+
+  .content span {
+    font-size: 11px;
+  }
+
+  .badge {
+    font-size: 10px;
+    padding: 3px 8px;
+  }
+
+  .modal {
+    width: 95%;
+    height: 92vh;
+    padding: 18px;
+    border-radius: 14px;
+  }
+
+  .modal h3 {
+    font-size: 18px;
+  }
+
+  .modal p {
+    font-size: 13px;
+  }
+
+  .contentBox {
+    font-size: 13px;
+    line-height: 1.6;
+    padding: 14px;
+  }
+>>>>>>> 8ef10752ed7f969bcf80b9bfa2d39fc6bdb670e5
 }

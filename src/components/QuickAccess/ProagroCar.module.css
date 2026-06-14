@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* ==================================================
    ESTILOS GERAIS (DESKTOP)
 ================================================== */
@@ -223,4 +224,231 @@
   .tituloPagina {
     font-size: 24px !important;
   }
+=======
+/* ==================================================
+   ESTILOS GERAIS (DESKTOP)
+================================================== */
+.container {
+  padding: 50px;
+  color: #fff;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: sans-serif;
+}
+
+.cardHeader {
+  background: #0f0b1e;
+  border: 1px solid #4a2c7a;
+  border-radius: 14px;
+  padding: 30px;
+  margin-bottom: 20px;
+}
+
+.cardFormulario {
+  background: #0f0b1e;
+  border: 1px solid #4a2c7a;
+  border-radius: 14px;
+  padding: 30px;
+}
+
+.gridFormulario {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+/* ==================================================
+   COMPONENTES
+================================================== */
+.botaoVoltar {
+  background: transparent;
+  border: 1px solid #4a2c7a;
+  color: #fff;
+  padding: 12px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  transition: 0.2s ease;
+}
+
+.tituloPagina {
+  font-size: 34px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.iconeTitulo {
+  color: #8b3dff;
+}
+
+.subtituloPagina {
+  color: #a09ab8;
+  font-size: 1rem;
+}
+
+.cardAbas {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.aba {
+  flex: 1;
+  padding: 16px;
+  border-radius: 10px;
+  background: #1a1226;
+  border: 1px solid #4a2c7a;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.abaAtiva {
+  background: #8b3dff;
+  font-weight: bold;
+}
+
+.inputTexto,
+.inputSelecao,
+.inputData,
+.inputNumerico {
+  width: 100%;
+  padding: 16px;
+  border-radius: 10px;
+  background: #1a1226;
+  border: 1px solid #4a2c7a;
+  color: #fff;
+  outline: none;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.botaoAcao {
+  margin-top: 25px;
+  width: 100%;
+  padding: 18px;
+  background: #6c3db5;
+  border: none;
+  border-radius: 12px;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+/* ==================================================
+   CLASSES ESPECÍFICAS DA SEGUNDA ABA (CAR)
+================================================== */
+.uploadContainer {
+  margin: 20px 0;
+  border: 2px dashed #4a2c7a;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  background: #1a1226;
+  cursor: pointer;
+}
+
+.uploadArea {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  color: #c4b5fd;
+}
+
+.iconeUpload {
+  font-size: 32px;
+  color: #8b3dff;
+}
+
+.subtituloSecao {
+  margin: 30px 0 15px 0;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+
+/* Container que agrupa o input e os botões */
+.inputNumero {
+  display: flex;
+  align-items: stretch;
+  gap: 4px;
+  background: #1a1226;
+  padding: 4px;
+  border-radius: 12px;
+  border: 1px solid #4a2c7a;
+}
+
+/* O input ocupa o resto do espaço */
+.inputNumerico {
+  flex: 1;
+  background: transparent !important;
+  border: none !important;
+  padding: 12px;
+  color: #fff;
+  font-size: 1rem;
+}
+
+/* Os botões ficam fixos e elegantes */
+.botaoMaisMenos {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #2a1b42;
+  border: 1px solid #4a2c7a;
+  color: #8b5cf6;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.botaoMaisMenos:hover {
+  background: #8b5cf6;
+  color: #fff;
+}
+
+.botaoMaisMenos:active {
+  transform: scale(0.95);
+}
+
+
+
+
+
+
+
+/* ==================================================
+   RESPONSIVIDADE MOBILE (O "Pulo do Gato")
+================================================== */
+@media (max-width: 900px) {
+  .container {
+    padding: 90px 10px 20px 10px !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    margin: 0 !important;
+  }
+
+  .gridFormulario {
+    grid-template-columns: 1fr !important;
+  }
+
+  .cardHeader,
+  .cardFormulario {
+    padding: 15px !important;
+    border-radius: 10px !important;
+  }
+
+  .tituloPagina {
+    font-size: 24px !important;
+  }
+>>>>>>> 8ef10752ed7f969bcf80b9bfa2d39fc6bdb670e5
 }

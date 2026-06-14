@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* =========================
    CONTAINER PRINCIPAL (FULL WIDTH)
 ========================= */
@@ -279,4 +280,287 @@
     padding: 14px;
     font-size: 0.95rem;
   }
+=======
+/* =========================
+   CONTAINER PRINCIPAL (FULL WIDTH)
+========================= */
+
+.container {
+  width: 100%;            
+  max-width: 1200px;      
+  margin: 0 auto;         
+  padding: 50px 16px;    
+  min-height: 100vh;    
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-sizing: border-box;
+}
+
+/* =========================
+   CARD
+========================= */
+.card {
+  background: #0f0b1e;
+  border: 1px solid #4a2c7a;
+  border-radius: 14px;
+  padding: 40px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 30px;
+}
+
+/* =========================
+   BOTÃO VOLTAR
+========================= */
+.botaoVoltar {
+  background: transparent;
+  border: 1px solid #4a2c7a;
+  color: #fff;
+  padding: 14px 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: 0.2s ease;
+  margin-bottom: 25px;
+  font-size: 1rem;
+}
+
+.botaoVoltar:hover {
+  background: rgba(139, 92, 246, 0.15);
+}
+
+/* =========================
+   TÍTULO
+========================= */
+.tituloPagina {
+  font-size: 42px;
+  font-weight: 800;
+  margin: 0 0 14px 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.iconeTitulo {
+  color:  #8b3dff;
+}
+
+.subtituloPagina {
+  color: #a09ab8;
+  font-size: 1.05rem;
+}
+
+/* =========================
+   LINHA DE BUSCA
+========================= */
+.linhaBusca {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+/* =========================
+   CAMPOS
+========================= */
+.campoPesquisa,
+.campoTribunal {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.labelCampo {
+  font-size: 1rem;
+  color: #c4b5fd;
+}
+
+/* INPUT / SELECT */
+.input,
+.select {
+  width: 100%;
+  padding: 26px;
+  border-radius: 12px;
+  border: 1px solid #4a2c7a;
+  background: #1a1226;
+  color: #fff;
+  outline: none;
+  font-size: 1.1rem;
+  box-sizing: border-box;
+}
+
+/* =========================
+   BOTÕES RÁPIDOS
+========================= */
+.botoesRapidos {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.btn {
+  background: #1a1226;
+  border: 1px solid #4a2c7a;
+  color: #fff;
+  padding: 18px 28px;
+  border-radius: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 1.05rem;
+  transition: 0.25s ease;
+  flex: 1;
+  min-width: 220px;
+}
+
+.btn:hover {
+  background: #2a1b42;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(139, 92, 246, 0.18);
+}
+
+
+/* =========================
+   BOTÃO PRINCIPAL
+========================= */
+.btnPrimary {
+  width: 100%;
+  background: #6c3db5;
+  font-weight: 900;
+  font-size: 1.2rem;
+  padding: 26px;
+  border-radius: 14px;
+}
+
+.btnPrimary:hover {
+  background: #7b4ad0;
+  box-shadow: 0 12px 30px rgba(108, 61, 181, 0.40);
+  transform: translateY(-2px);
+}
+
+/* =========================
+   RESPONSIVO
+========================= */
+@media (max-width: 900px) {
+
+  .container {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    min-height: 100% !important;
+    height: auto !important; 
+    overflow: visible !important;
+    padding-bottom: 40px !important; 
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 70px !important;
+    background-color: #120a1f !important;
+  }
+ .cardFormulario {
+    margin-bottom: 120px !important;
+  }
+
+  .botaoVoltar {
+    margin: 16px !important;
+    margin-bottom: 12px !important;
+    margin-left: 16px !important;
+    margin-right: 16px !important;
+  }
+
+  .uploadArea {
+    padding: 20px !important; 
+    text-align: center;
+  }
+  
+  .iconeUpload {
+    font-size: 28px !important; 
+    margin-bottom: 8px !important;
+  }
+  
+  .uploadContainer {
+    width: 100% !important;
+    margin-bottom: 20px !important;
+  }
+
+
+  /* =========================
+     CARD MAIS COMPACTO
+  ========================= */
+  .card {
+    padding: 16px !important;
+    border-radius: 0 !important;
+    border-left: none !important;
+    border-right: none !important;
+    margin-bottom: 16px !important;
+    background: #0f0b1e !important;
+  }
+
+  /* =========================
+     TÍTULO MENOR
+  ========================= */
+  .tituloPagina {
+    font-size: 20px;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 6px;
+  }
+
+  .subtituloPagina {
+    font-size: 0.8rem;
+    text-align: center;
+  }
+
+  /* =========================
+     BUSCA MAIS COMPACTA
+  ========================= */
+  .linhaBusca {
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+
+  .labelCampo {
+    font-size: 0.85rem;
+  }
+
+  .input,
+  .select {
+    padding: 12px;
+    font-size: 0.9rem;
+  }
+
+  /* =========================
+     BOTÕES MAIS LEVES
+  ========================= */
+  .botoesRapidos {
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+
+  .btn {
+    padding: 12px;
+    font-size: 0.9rem;
+    min-width: 100%;
+  }
+
+  /* =========================
+     BOTÃO PRINCIPAL MENOR
+  ========================= */
+  .btnPrimary {
+    padding: 14px;
+    font-size: 0.95rem;
+  }
+>>>>>>> 8ef10752ed7f969bcf80b9bfa2d39fc6bdb670e5
 }

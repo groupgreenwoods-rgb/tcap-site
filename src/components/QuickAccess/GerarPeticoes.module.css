@@ -1,0 +1,255 @@
+.container {
+    padding: 40px;
+    color: #fff;
+    max-width: 900px;
+    margin: 0 auto;
+    font-family: sans-serif;
+}
+
+.title {
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.btnExpandir {
+    width: 800px;
+    margin: 0 auto;
+    display: block;
+    padding: 20px;
+    background: #1a1226;
+    border: 1px solid #4a2c7a;
+    color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: left;
+}
+
+.gridContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 260px);
+    justify-content: center;
+    gap: 15px;
+    margin: 20px auto;
+    width: 800px;
+}
+
+.itemWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 260px;
+}
+
+.btnArea {
+    width: 260px;
+    height: 60px;
+    background: #1a1226;
+    border: 1px solid #4a2c7a;
+    color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    transition: all 0.3s ease;
+}
+
+.btnArea:hover {
+    background: #2a1b42;
+}
+
+/* CHECKBOX */
+.checkbox {
+    width: 18px;
+    height: 18px;
+    border: 2px solid #4a2c7a;
+    border-radius: 4px;
+    margin-right: 10px;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.btnArea.ativoVerde {
+    background: #8b3dff !important;
+    border-color: #d1a3ff;
+    color: #fff;
+    font-weight: bold;
+}
+
+.btnArea.ativoVerde .checkbox {
+    background-color: #fff;
+    border-color: #fff;
+}
+
+.btnArea.ativoVerde .checkbox::after {
+    content: '✓';
+    color: #8b3dff;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+}
+
+/* PEÇAS */
+.containerPecasExpandido {
+    padding: 10px;
+    background: #0b0712;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 260px;
+}
+
+.btnPeca {
+    padding: 12px;
+    background: #1a1226;
+    border: 1px solid #4a2c7a;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.2s ease;
+}
+
+.btnPeca:hover {
+    background: #2a1b42;
+    padding-left: 20px;
+}
+
+.btnPeca.ativoPeca {
+    background: #8b3dff !important;
+    color: #fff;
+    font-weight: bold;
+    border-left: 5px solid #fff;
+}
+
+/* FORM */
+.formGrid {
+    display: grid;
+    gap: 20px;
+    margin: 30px auto;
+    width: 800px;
+}
+
+.input {
+    width: 100%;
+    padding: 20px;
+    background: #1a1226;
+    border: 1px solid #4a2c7a;
+    color: #fff;
+    border-radius: 10px;
+}
+
+.fullWidth {
+    min-height: 120px;
+}
+
+.btnGerar {
+    width: 800px;
+    margin: 30px auto;
+    display: block;
+    padding: 22px;
+    background: #6c3db5;
+    border: none;
+    border-radius: 10px;
+    font-weight: 800;
+    cursor: pointer;
+    color: #fff;
+    font-size: 1.1rem;
+    transition: all 0.2s ease;
+}
+
+.btnGerar:hover {
+    background: #7b4ad0;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(108, 61, 181, 0.35);
+}
+
+/* =========================
+   BOTÃO MOBILE (CORRIGIDO)
+========================= */
+.btnSairMobile {
+    display: none;
+}
+
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 900px) {
+
+  .container {
+    padding: 20px;
+    max-width: 100%;
+    position: relative;
+    overflow-x: hidden;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .btnExpandir,
+  .btnGerar {
+    width: 100%;
+  }
+
+  .gridContainer {
+    width: 100%;
+    grid-template-columns: 1fr;
+  }
+
+  .itemWrapper,
+  .btnArea,
+  .containerPecasExpandido,
+  .formGrid {
+    width: 100%;
+  }
+
+  .formGrid {
+    position: fixed;
+    top: 60px;
+    right: 0;
+    height: calc(100vh - 60px);
+    width: 100%;
+    background: #0b0712;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    z-index: 2000;
+    transform: translateX(100%) scale(0.98);
+    opacity: 0;
+    transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+                opacity 0.35s ease;
+    will-change: transform;
+  }
+
+  .formGrid.ativo {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+  }
+
+  /* botão volta CORRETO */
+  .btnSairMobile {
+    display: block;
+    position: sticky;
+    top: 0;
+    background: #1a1226;
+    border: 1px solid #4a2c7a;
+    color: #fff;
+    padding: 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+
+  .btnSairMobile:hover {
+    background: rgba(139, 92, 246, 0.15);
+  }
+
+  .gridContainer.formHidden {
+    display: none;
+  }
+}

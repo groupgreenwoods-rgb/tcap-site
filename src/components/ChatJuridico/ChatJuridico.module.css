@@ -1,0 +1,359 @@
+/* ================================
+   BASE GLOBAL (IMPORTANTE)
+================================ */
+html, body {
+  height: 100%;
+  margin: 0;
+  background: #0b0b12;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+
+  -webkit-tap-highlight-color: transparent;
+  overscroll-behavior: none;
+}
+
+/* ================================
+   LAYOUT PRINCIPAL (DESKTOP + BASE)
+================================ */
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 900px;
+
+  height: 100dvh;
+  height: 100vh;
+
+  margin: 0 auto;
+  padding: 32px;
+  box-sizing: border-box;
+
+  overflow: hidden;
+  min-width: 320px;
+
+  background: radial-gradient(
+    circle at top,
+    rgba(139, 92, 246, 0.10),
+    transparent 55%
+  );
+}
+
+/* ================================
+   HEADER / HERO
+================================ */
+.headerContainer {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.heroContent {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.welcomeTitle {
+  font-size: 1.4rem;
+  color: #fff;
+  margin: 0 0 4px 0;
+}
+
+.heroSubtitle {
+  color: #8b5cf6;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* ================================
+   CHAT AREA (DESKTOP BASE)
+================================ */
+/* ================================
+   CHAT AREA (DEFINIÇÃO ÚNICA - DESKTOP E MOBILE)
+================================ */
+.chatArea {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 10px 2px;
+  scrollbar-width: thin;
+  scrollbar-color: #8b5cf6 #0f0b1e; 
+}
+
+/* Chrome, Edge e Safari (Forçando estilo com !important) */
+.chatArea::-webkit-scrollbar {
+  width: 8px !important;
+}
+
+.chatArea::-webkit-scrollbar-track {
+  background: #0f0b1e !important; 
+  border-radius: 10px !important;
+}
+
+.chatArea::-webkit-scrollbar-thumb {
+  background-color: #8b5cf6 !important; 
+  border-radius: 10px !important;
+  border: 2px solid #0f0b1e !important; 
+}
+
+.chatArea::-webkit-scrollbar-thumb:hover {
+  background-color: #a78bfa !important; 
+}
+/* ================================
+   MENSAGENS
+================================ */
+.mensagemWrapper {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+}
+
+.aiWrapper { justify-content: flex-start; }
+.userWrapper { justify-content: flex-end; }
+
+.avatarPequeno {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.mensagem {
+  max-width: min(70%, 600px);
+  padding: 12px 14px;
+
+  border-radius: 16px;
+
+  line-height: 1.4;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.user {
+  background: rgba(139, 92, 246, 0.18);
+  color: #fff;
+}
+
+.ai {
+  background: rgba(255, 255, 255, 0.05);
+  color: #d1d5db;
+}
+
+/* ================================
+   INPUT (DESKTOP BASE)
+================================ */
+.inputArea {
+  flex-shrink: 0;
+  display: flex;
+  gap: 10px;
+  padding: 12px;
+  border-radius: 16px;
+  background: rgba(26, 20, 48, 0.75);
+  border: 1px solid rgba(139, 92, 246, 0.25);
+  backdrop-filter: blur(10px);
+  margin-top: 10px;
+}
+
+.textarea {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #f0ecff;
+  font-size: 1rem;
+  resize: none;
+  min-width: 0;
+}
+
+.inputActions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.btnEnviar,
+.btnLimpar {
+  background: rgba(139, 92, 246, 0.12);
+  border: 1px solid rgba(139, 92, 246, 0.25);
+  color: #8b5cf6;
+  padding: 8px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.btnEnviar:hover,
+.btnLimpar:hover {
+  background: rgba(139, 92, 246, 0.25);
+}
+
+/* ================================
+   🔥 MOBILE PREMIUM (VERSÃO FINAL)
+================================ */
+@media (max-width: 600px) {
+
+  /* =========================
+     CONTAINER (CORRIGIDO)
+  ========================= */
+  .container {
+    padding: 8px; 
+    height: 100dvh;
+    height: 100vh;
+  }
+
+  /* =========================
+     HERO (MENOR E FIXO)
+  ========================= */
+  .hero {
+    margin-bottom: 4px;
+    flex-shrink: 0;
+  }
+
+  .heroContent {
+    gap: 10px;
+  }
+
+  .avatar {
+    width: 44px;
+    height: 44px;
+  }
+
+  .welcomeTitle {
+    font-size: 1.05rem;
+  }
+
+  .heroSubtitle {
+    font-size: 0.85rem;
+    opacity: 0.9;
+  }
+
+  /* =========================
+     QUICK ACCESS
+  ========================= */
+  .quickAccess-global {
+    flex-shrink: 0;
+    margin: 0;
+    padding: 6px 0;
+    background: rgba(8, 7, 15, 0.75);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(139, 92, 246, 0.15);
+  }
+
+  .quickButtons {
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+    gap: 6px;
+  }
+
+  .quickBtn {
+    flex: 1 1 calc(50% - 8px); /* 🔥 2 por linha */
+    font-size: 0.75rem;
+    padding: 7px 10px;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+ 
+/* ==========================================================
+   CHAT AREA - ESTILO PREMIUM DE ROLAGEM
+========================================================== */
+.chatArea {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 10px 2px;
+  scrollbar-width: thin;
+  scrollbar-color: #8b5cf6 #0f0b1e; 
+}
+
+/* Chrome, Edge e Safari */
+.chatArea::-webkit-scrollbar {
+  width: 8px; 
+}
+
+.chatArea::-webkit-scrollbar-track {
+  background: #0f0b1e; 
+  border-radius: 10px;
+}
+
+.chatArea::-webkit-scrollbar-thumb {
+  background-color: #8b5cf6; 
+  border-radius: 10px;
+  border: 2px solid #0f0b1e; 
+}
+
+.chatArea::-webkit-scrollbar-thumb:hover {
+  background-color: #a78bfa; 
+}
+  .mensagem {
+    max-width: 90%;
+    padding: 10px 12px;
+
+    font-size: 0.95rem;
+    border-radius: 14px;
+  }
+
+  .avatarPequeno {
+    width: 30px;
+    height: 30px;
+  }
+
+  /* =========================
+     INPUT (FIXO E LIMPO)
+  ========================= */
+  .inputArea {
+    flex-shrink: 0;
+    margin-top: 8px;
+    padding: 10px;
+    border-radius: 16px;
+    background: rgba(20, 16, 40, 0.78);
+    border: 1px solid rgba(139, 92, 246, 0.25);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  }
+
+  .textarea {
+    font-size: 0.95rem;
+  }
+  .btnEnviar:active,
+  .btnLimpar:active {
+    transform: scale(0.96);
+  }
+  /* =========================
+     TITLE
+  ========================= */
+  h1 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+}

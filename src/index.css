@@ -1,0 +1,26 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  /* MUDEI AQUI: de hidden para auto */
+  height: auto; 
+  min-height: 100%; 
+  overflow-y: auto; 
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background: #08070f;
+  color: #f0ecff;
+}
+
+#root {
+ 
+  height: auto;
+  min-height: 100vh;
+}

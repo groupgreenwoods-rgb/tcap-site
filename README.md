@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # TCAP IA² — Advogado ⚖️
 
 Uma plataforma web moderna e sofisticada voltada para o setor jurídico, desenvolvida com o objetivo de otimizar a rotina de advogados por meio de inteligência artificial e ferramentas de acesso rápido.
